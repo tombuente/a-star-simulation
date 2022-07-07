@@ -244,17 +244,17 @@ void update_costs(Node* node, int g, int h) {
 
 void get_neighbors(Environment* env, Node** neighbors, Node* node) {
 	// clang-format off
-    //
-    // 1   2   3
-    // 4       5
-    // 6   7   8
-    //
-    // 0;0 1;0 2;0    nodes + off - size_x - 1    nodes + off - size_x    nodes + off - size_x + 1
-    // 0;1     2;1    nodes + off - 1                                     nodes + off + 1
-    // 0;2 1;2 2;2    nodes + off + size_x - 1    nodes + off + size_x    nodes + off + size_x + 1
-    //
+	//
+	// 1   2   3
+	// 4       5
+	// 6   7   8
+	//
+	// 0;0 1;0 2;0    nodes + off - size_x - 1    nodes + off - size_x    nodes + off - size_x + 1
+	// 0;1     2;1    nodes + off - 1                                     nodes + off + 1
+	// 0;2 1;2 2;2    nodes + off + size_x - 1    nodes + off + size_x    nodes + off + size_x + 1
+	//
 	// Where nodes = env->nodes
-    //
+	//
 	// clang-format on
 
 	// Current offset in grind relative to env->nodes
