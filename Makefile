@@ -1,6 +1,6 @@
 NAME = astar
 CC = gcc
-CFLAGS = -Wall -MMD -Og -ggdb3 -fsanitize=address,undefined
+CFLAGS = -Wall -MMD
 LDFLAGS = -lncurses -lm
 
 
