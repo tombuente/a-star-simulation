@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 #include "a_star.h"
 
 int main() {
