@@ -131,8 +131,6 @@ void destroy_environment(Environment* env) {
 	free(env->nodes);
 	free(env->ts);
 	free(env);
-
-	return;
 }
 
 void a_star(Environment* env) {
@@ -215,7 +213,6 @@ void a_star(Environment* env) {
 
 	destory_linked_list(open);
 	destory_linked_list(closed);
-	return;
 }
 
 void set_start_and_end(Environment* env, int start_x, int start_y, int end_x, int end_y) {
@@ -311,8 +308,6 @@ void get_neighbors(Environment* env, Node** neighbors, Node* node) {
 	if (calc_off < size && calc_off < (node->y + 2) * env->size_x) {
 		neighbors[7] = env->nodes + calc_off;
 	}
-
-	return;
 }
 
 void clear_neighbors(Node** neighbors) {
@@ -349,8 +344,6 @@ void print_grid(Environment* env) {
 			}
 		}
 	}
-
-	return;
 }
 
 void print_path(Environment* env, Node* node) {
@@ -361,8 +354,6 @@ void print_path(Environment* env, Node* node) {
 		node = node->parent;
 	}
 	attroff(COLOR_PAIR(4));
-
-	return;
 }
 
 void clear_path(Environment* env, Node* node) {
@@ -373,6 +364,4 @@ void clear_path(Environment* env, Node* node) {
 		node = node->parent;
 	}
 	attroff(COLOR_PAIR(3));
-
-	return;
 }
