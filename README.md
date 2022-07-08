@@ -1,7 +1,7 @@
 # A* Simulation
 A simulation of the A* algorithm using ncurses.
 
-![showcase](https://user-images.githubusercontent.com/108880623/177858753-734d35dd-0a97-4666-8fe2-7e2ad217e3de.gif)
+![astar](https://user-images.githubusercontent.com/108880623/177988125-f8ffb96e-1ab2-476d-be10-a40c19df8cc7.gif)
 
 ## Getting started
 ```
