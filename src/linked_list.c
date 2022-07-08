@@ -60,44 +60,30 @@ ListElement* insert_sorted(ListElement* head, Node* node) {
 		return head;
 	}
 
-	ListElement* new_node = new_list_element();
-	new_node->data = node;
-
-	ListElement* cur = head;
+	ListElement* list_element = new_list_element();
+	list_element->data = node;
 
 	// Head is bigger, append in front
-	if (cur->data->f > node->f) {
-		head = new_node;
-		new_node->next = cur;
+	if (head->data->f > node->f) {
+		list_element->next = head;
+		head = list_element;
 		return head;
 	}
-	if (cur->data->f == node->f) {
-		if (cur->data->h > node->h) {
-			head = new_node;
-			new_node->next = cur;
-			return head;
-		}
-	}
+
+	ListElement* cur = head;
 
 	while (true) {
 		if (cur->next) {
 			if (cur->next->data->f > node->f) {
 				ListElement* temp = cur->next;
-				cur->next = new_node;
-				new_node->next = temp;
+				cur->next = list_element;
+				list_element->next = temp;
 				break;
 			}
-			if (cur->next->data->f == node->f) {
-				if (cur->next->data->h > node->h) {
-					ListElement* temp = cur->next;
-					cur->next = new_node;
-					new_node->next = temp;
-					break;
-				}
-			}
+
 			cur = cur->next;
 		} else {
-			cur->next = new_node;
+			cur->next = list_element;
 			break;
 		}
 	}
